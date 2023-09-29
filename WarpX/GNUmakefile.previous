@@ -1,0 +1,66 @@
+AMREX_HOME  ?= $(TEST_HOME)/amrex
+PICSAR_HOME ?= ../picsar
+OPENBC_HOME ?= ../openbc_poisson
+
+DEBUG = FALSE
+#DEBUG	= TRUE
+
+WARN_ALL = TRUE
+#WARN_ERROR=TRUE
+
+#DIM = 1
+#DIM = 2
+DIM = 3
+
+QED	       = TRUE
+#QED_TABLE_GEN = TRUE
+
+COMP = gcc
+#COMP = intel
+#COMP = pgi
+
+USE_HDF5=TRUE
+HDF5_HOME=$(TEST_H5_HOME)
+USE_HDF5_ASYNC = TRUE
+ABT_HOME = $(ABT_DIR)/install
+ASYNC_HOME = $(VOL_DIR)/src
+
+TINY_PROFILE   = TRUE
+#PROFILE       = TRUE
+#COMM_PROFILE  = TRUE
+#TRACE_PROFILE = TRUE
+
+#USE_OMP   = TRUE
+USE_GPU   = FALSE
+
+EBASE     = main
+
+USE_GPUCLOCK = TRUE
+USE_PYTHON_MAIN = FALSE
+
+USE_SENSEI_INSITU = FALSE
+USE_ASCENT_INSITU = FALSE
+USE_OPENPMD = FALSE
+
+WarpxBinDir = 
+
+USE_PSATD = FALSE
+USE_PSATD_PICSAR = FALSE
+USE_RZ = FALSE
+
+USE_EB = FALSE
+
+ifeq ($(USE_HDF5), TRUE)
+DEFINES += -DAMREX_USE_HDF5
+INCLUDE_LOCATIONS += $(HDF5_HOME)/include
+LIBRARIES         += -L$(HDF5_HOME)/lib -lhdf5 -lz -ldl -Wl,-rpath,$(HDF5_HOME)/lib
+endif
+
+ifeq ($(USE_HDF5_ASYNC), TRUE)
+DEFINES                            += -DAMREX_USE_HDF5_ASYNC -DAMREX_MPI_THREAD_MULTIPLE
+INCLUDE_LOCATIONS += $(ABT_HOME)/include $(ASYNC_HOME)
+LIBRARIES             += -L$(ABT_HOME)/lib -L$(ASYNC_HOME) -lh5async -labt -Wl,-rpath,$(ABT_HOME)/lib -Wl,-rpath,$(ASYNC_HOME)
+endif
+
+WARPX_HOME := .
+include $(WARPX_HOME)/Source/Make.WarpX
