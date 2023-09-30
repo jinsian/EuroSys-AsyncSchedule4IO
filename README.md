@@ -6,7 +6,7 @@ To address these issues, we propose an optimization approach for the task schedu
 
 Within this artifact, we offer a comparative analysis, benchmarking our solution against two alternative approaches: (1) the previous method employing asynchronous writes without data compression, and (2) the baseline solution uses synchronous data writes without compression. This alignment with our paper underscores the performance enhancements our solution delivers.
 
-Furthermore, we conducted our artifact implementation on Chameleon Cloud, utilizing a Singularity container to ensure optimal applicability across various computing environments. The test node on Chameleon Cloud is equipped with two Intel Xeon E5-2660 CPUs and 128 GB of memory, specifically configured with gpu.model=P100. We strongly recommend that reviewers also employ the Chameleon Cloud platform for their artifact assessments, promoting consistency and reproducibility in our results.
+Furthermore, we conducted our artifact implementation on Chameleon Cloud, utilizing a Singularity container to ensure optimal applicability across various computing environments. The test node on Chameleon Cloud is equipped with two Intel Xeon E5-2660 CPUs and 128 GB of memory, specifically configured with gpu.model=P100. We strongly recommend to use Chameleon Cloud platform for assessments with consistency and reproducibility.
 
 ## Method 1: Use Singularity Image (Highly Recommended)
 The entire workflow takes approximately 15 minutes to execute, including downloading container image and preparing environment (4 mins), running WarpX simulation (5 mins), running Nyx simulation (5 mins), and evaluating performance (1 min).
