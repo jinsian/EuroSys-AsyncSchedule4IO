@@ -1,5 +1,7 @@
 # Concealing Compression-accelerated I/O for HPC Applications through In Situ Task Scheduling
 
+[![DOI](https://zenodo.org/badge/698428132.svg)](https://zenodo.org/badge/latestdoi/698428132)
+
 Lossy compression and asynchronous I/O are two of the most effective solutions for reducing storage overhead and enhancing I/O performance in large-scale high-performance computing (HPC) applications. However, current approaches have limitations that prevent them from fully leveraging lossy compression, and they may also result in task collisions, which restrict the overall performance of HPC applications. 
 
 To address these issues, we propose an optimization approach for the task scheduling problem that encompasses computation, compression, and I/O. experimental results with up to 16 nodes and 64 GPUs from ORNL Summit, as well as real-world HPC applications, demonstrate that our solution reduces I/O overhead by up to 3.8× and 2.6× compared to non-compression and asynchronous I/O solutions, respectively.
