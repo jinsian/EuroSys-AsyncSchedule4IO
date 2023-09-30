@@ -29,7 +29,7 @@ Install [Singularity](https://singularity-tutorial.github.io/01-installation/)
 You can download, build, and run the image file that encompasses all the necessary components.
 ```
 sudo pip3 install gdown
-gdown https://drive.google.com/file/d/1o0AumoDJgnZKcLXv-ZH7b5lGhKzP4_6A/view?usp=sharing
+gdown  https://drive.google.com/uc?id=1o0AumoDJgnZKcLXv-ZH7b5lGhKzP4_6A
 sudo singularity build --sandbox artiAsync AsyncSchedule.sif
 sudo singularity shell --writable artiAsync
 ```
