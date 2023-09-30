@@ -1,4 +1,4 @@
-# Concealing Compression-Accelerated I/O for HPC Applications through In Situ Task Scheduling
+# Concealing Compression-accelerated I/O for HPC Applications through In Situ Task Scheduling
 
 Lossy compression and asynchronous I/O are two of the most effective solutions for reducing storage overhead and enhancing I/O performance in large-scale high-performance computing (HPC) applications. However, current approaches have limitations that prevent them from fully leveraging lossy compression, and they may also result in task collisions, which restrict the overall performance of HPC applications. 
 
