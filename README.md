@@ -26,25 +26,14 @@ Storage: >= 32 GBs
 Install [Singularity](https://singularity-tutorial.github.io/01-installation/)
 
 ### Step 2: Download, Build, and run the image file (need root privilege) with singularity
-You have the option to download the image, which is significantly faster than building an image from the definition file. 
+You can download, build, and run the image file that encompasses all the necessary components.
 ```
 sudo pip3 install gdown
-gdown https://drive.google.com/uc?id=14v_xUmET-HvCFO3LqmD4sNJL65jBcd0L&export=download
+gdown https://drive.google.com/file/d/1o0AumoDJgnZKcLXv-ZH7b5lGhKzP4_6A/view?usp=sharing
 sudo singularity build --sandbox artiAsync AsyncSchedule.sif
 sudo singularity shell --writable artiAsync
 ```
-<!-- or via GitHub
-```
-git clone https://github.com/hipdac-lab/SC23-AMRIC-Image.git
-cat SC23-AMRIC-Image/img/amric.sif-* > amric.sif
-``` -->
-Alternatively, you can opt to build the image from our definition file, although please be aware that this process may take longer (approximately 20 minutes).
-```
-sudo pip3 install gdown
-gdown https://drive.google.com/uc?id=14v_xUmET-HvCFO3LqmD4sNJL65jBcd0L&export=download
-sudo singularity build --sandbox artiAsync Schedule-Async.def
-sudo singularity shell --writable artiAsync
-```
+Now, you are running inside of the container.
 
 ### Step 4: Set up environmental variables
 ```
@@ -137,12 +126,12 @@ Nyx simulation with Baseline solution time: 47.08 seconds
 Baseline overhead compared to computation only: 37.2 %
 -------------------- Previous --------------------
 Baseline: no compression, no asynchronous write.
-Nyx simulation with Baseline solution time: 47.04 seconds
-Baseline overhead compared to computation only: 37.1 %
+Nyx simulation with Previous solution time: 47.04 seconds
+Previous overhead compared to computation only: 37.1 %
 ---------------------- Ours ----------------------
 Baseline: no compression, no asynchronous write.
-Nyx simulation with Baseline solution time: 37.12 seconds
-Baseline overhead compared to computation only: 8.2 %
+Nyx simulation with Our solution time: 37.12 seconds
+Ours overhead compared to computation only: 8.2 %
 ------------------- Improvement ------------------
 Our improvement compared to previous: 4.53 times
 ----------------------- End ----------------------
@@ -156,17 +145,17 @@ Nyx simulation with Baseline solution time: 38.74 seconds
 Baseline overhead compared to computation only: 121.9 %
 -------------------- Previous --------------------
 Baseline: no compression, no asynchronous write.
-Nyx simulation with Baseline solution time: 38.52 seconds
-Baseline overhead compared to computation only: 120.6 %
+Nyx simulation with Previous solution time: 38.52 seconds
+Previous overhead compared to computation only: 120.6 %
 ---------------------- Ours ----------------------
 Baseline: no compression, no asynchronous write.
-Nyx simulation with Baseline solution time: 23.87 seconds
-Baseline overhead compared to computation only: 36.7 %
+Nyx simulation with Our solution time: 23.87 seconds
+Ours overhead compared to computation only: 36.7 %
 ------------------- Improvement ------------------
 Our improvement compared to previous: 3.29 times
 ----------------------- End ----------------------
 ```
-Please note that the performance may vary on different machines and environments. Nevertheless, you should be able to discern the performance improvements our solution offers compared to previous approaches. These results are consistent with our paper's findings.
+Please note that the performance may vary on different machines and environments. Nevertheless, you should be able to discern the performance improvements our solution offers compared to previous approaches. These results are consistent with our paper's findings. Please be aware that the runtime may vary, particularly when resources are limited. We highly recommend running steps 5, 6, 8, and 9 multiple times to observe consistent results.
 
 
 ## Method 2: Build From Source
@@ -295,12 +284,12 @@ Nyx simulation with Baseline solution time: 47.08 seconds
 Baseline overhead compared to computation only: 37.2 %
 -------------------- Previous --------------------
 Baseline: no compression, no asynchronous write.
-Nyx simulation with Baseline solution time: 47.04 seconds
-Baseline overhead compared to computation only: 37.1 %
+Nyx simulation with Previous solution time: 47.04 seconds
+Previous overhead compared to computation only: 37.1 %
 ---------------------- Ours ----------------------
 Baseline: no compression, no asynchronous write.
-Nyx simulation with Baseline solution time: 37.12 seconds
-Baseline overhead compared to computation only: 8.2 %
+Nyx simulation with Our solution time: 37.12 seconds
+Ours overhead compared to computation only: 8.2 %
 ------------------- Improvement ------------------
 Our improvement compared to previous: 4.53 times
 ----------------------- End ----------------------
@@ -314,14 +303,14 @@ Nyx simulation with Baseline solution time: 38.74 seconds
 Baseline overhead compared to computation only: 121.9 %
 -------------------- Previous --------------------
 Baseline: no compression, no asynchronous write.
-Nyx simulation with Baseline solution time: 38.52 seconds
-Baseline overhead compared to computation only: 120.6 %
+Nyx simulation with Previous solution time: 38.52 seconds
+Previous overhead compared to computation only: 120.6 %
 ---------------------- Ours ----------------------
 Baseline: no compression, no asynchronous write.
-Nyx simulation with Baseline solution time: 23.87 seconds
-Baseline overhead compared to computation only: 36.7 %
+Nyx simulation with Our solution time: 23.87 seconds
+Ours overhead compared to computation only: 36.7 %
 ------------------- Improvement ------------------
 Our improvement compared to previous: 3.29 times
 ----------------------- End ----------------------
 ```
-Please note that the performance may vary on different machines and environments. Nevertheless, you should be able to discern the performance improvements our solution offers compared to previous approaches. These results are consistent with our paper's findings.
+Please note that the performance may vary on different machines and environments. Nevertheless, you should be able to discern the performance improvements our solution offers compared to previous approaches. These results are consistent with our paper's findings. Please be aware that the runtime may vary, particularly when resources are limited. We highly recommend running steps 5, 6, 8, and 9 multiple times to observe consistent results.
