@@ -37,7 +37,7 @@ sudo singularity shell --writable artiAsync
 ```
 Now, you are running inside of the container.
 
-### Step 4: Set up environmental variables
+### Step 3: Set up environmental variables
 ```
 export OMPI_DIR=/opt/ompi 
 export OMPI_VERSION=4.1.1
@@ -50,19 +50,19 @@ export OMPI_ALLOW_RUN_AS_ROOT=1
 export OMPI_ALLOW_RUN_AS_ROOT_CONFIRM=1
 ```
 
-### Step 5: Run Nyx simulation with (1) baseline, (2) previous, and (3) ours
+### Step 4: Run Nyx simulation with (1) baseline, (2) previous, and (3) ours
 ```
 cd /home/EuroSys-AsyncSchedule/
 bash ./runnyx.sh
 ```
 
-### Step 6: Run WarpX simulation with (1) baseline, (2) previous, and (3) ours
+### Step 5: Run WarpX simulation with (1) baseline, (2) previous, and (3) ours
 ```
 cd /home/EuroSys-AsyncSchedule/
 bash ./runwarpx.sh
 ```
 
-### Step 7 (Optional): We retaine log files for all runs, and now you can check them out
+### Step 6: (Optional): We retaine log files for all runs, and now you can check them out
 ```
 head -n 200 ./Nyx/Exec/LyA/test1.txt
 head -n 100 ./WarpX/test1.txt
@@ -108,13 +108,13 @@ Evolve time = 10.47966713 s; This step = 3.457123984 s; Avg. per step = 3.493222
 STEP 4 starts ...
 ```
 
-### Step 8: Evaluate Nyx's perormance between (1) baseline, (2) previous, and (3) ours
+### Step 7: Evaluate Nyx's perormance between (1) baseline, (2) previous, and (3) ours
 ```
 cd ./Nyx/Exec/LyA
 python3 ./readresults.py test1.txt test2.txt test3.txt test4.txt
 ```
 
-### Step 9: Evaluate WarpX's perormance between (1) baseline, (2) previous, and (3) ours
+### Step 8: Evaluate WarpX's perormance between (1) baseline, (2) previous, and (3) ours
 ```
 cd $TEST_HOME/WarpX/
 python3 ./readresults.py test1.txt test2.txt test3.txt test4.txt
@@ -157,7 +157,7 @@ Ours overhead compared to computation only: 36.7 %
 Our improvement compared to previous: 3.29 times
 ----------------------- End ----------------------
 ```
-Please note that the performance may vary on different machines and environments. Nevertheless, you should be able to discern the performance improvements our solution offers compared to previous approaches. These results are consistent with our paper's findings. Please be aware that the runtime may vary, particularly when resources are limited. We highly recommend running steps 5, 6, 8, and 9 multiple times to observe consistent results.
+Please note that the performance may vary on different machines and environments. Nevertheless, you should be able to discern the performance improvements our solution offers compared to previous approaches. These results are consistent with our paper's findings. Please be aware that the runtime may vary, particularly when resources are limited. We highly recommend running steps 4, 5, 7, and 8 multiple times to observe consistent results.
 
 
 ## Method 2: Build From Source
