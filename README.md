@@ -10,6 +10,29 @@ Within this artifact, we offer a comparative analysis, benchmarking our solution
 
 Furthermore, we conducted our artifact implementation on Chameleon Cloud, utilizing a Singularity container to ensure optimal applicability across various computing environments. The test node on Chameleon Cloud is equipped with two Intel Xeon E5-2660 CPUs and 128 GB of memory, specifically configured with gpu.model=P100. We strongly recommend to use Chameleon Cloud platform for assessments with consistency and reproducibility.
 
+Code structure:
+
+Nyx   
+&emsp;|___Exec  
+&emsp;|&emsp;&emsp;|___LyA: The application we used with nyx cosmological simulation   
+&emsp;|___Source  
+&emsp;&emsp;&emsp;|___IO: IO to Amrex for Nyx cosmological simulation   
+
+SZ3 : a modified version of SZ3 for lossy compression  
+
+WarpX: The WarpX simulation  
+&emsp;|___Source  
+&emsp;&emsp;&emsp;|___Diagnostics: IO to Amrex for WarpX simulation  
+
+amrex: A data framework for adaptive mesh refinement applications  
+&emsp;|___Src  
+&emsp;&emsp;&emsp;|___Extern  
+&emsp;&emsp;&emsp;&emsp;&emsp;|___HDF5: modified parallel write to HDF5 format  
+
+hdf5: A parallel I/O library that support Virtual Object Layer (VOL)
+
+vol-async: A modified version of vol-async to asynchronously write the data with HDF5.
+
 ## Method 1: Use Singularity Image (Highly Recommended)
 The entire workflow takes approximately 15 minutes to execute, including downloading container image and preparing environment (4 mins), running WarpX simulation (5 mins), running Nyx simulation (5 mins), and evaluating performance (1 min).
 
