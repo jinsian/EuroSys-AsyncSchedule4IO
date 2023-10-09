@@ -161,20 +161,20 @@ Ours overhead compared to computation only: 8.2 %
 Our improvement compared to previous: 4.53 times
 ----------------------- End ----------------------
 ```
-### The expected results for Nyx’s performance comparison are:
+### The expected results for WarpX’s performance comparison are:
 ```
 Sample from 10 iterations.
 -------------------- Baseline --------------------
 Baseline: no compression, no asynchronous write.
-Nyx simulation with Baseline solution time: 38.74 seconds
+WarpX simulation with Baseline solution time: 38.74 seconds
 Baseline overhead compared to computation only: 121.9 %
 -------------------- Previous --------------------
 Baseline: no compression, no asynchronous write.
-Nyx simulation with Previous solution time: 38.52 seconds
+WarpX simulation with Previous solution time: 38.52 seconds
 Previous overhead compared to computation only: 120.6 %
 ---------------------- Ours ----------------------
 Baseline: no compression, no asynchronous write.
-Nyx simulation with Our solution time: 23.87 seconds
+WarpX simulation with Our solution time: 23.87 seconds
 Ours overhead compared to computation only: 36.7 %
 ------------------- Improvement ------------------
 Our improvement compared to previous: 3.29 times
@@ -319,20 +319,20 @@ Ours overhead compared to computation only: 8.2 %
 Our improvement compared to previous: 4.53 times
 ----------------------- End ----------------------
 ```
-### The expected results for Nyx’s performance comparison are:
+### The expected results for WarpX’s performance comparison are:
 ```
 Sample from 10 iterations.
 -------------------- Baseline --------------------
 Baseline: no compression, no asynchronous write.
-Nyx simulation with Baseline solution time: 38.74 seconds
+WarpX simulation with Baseline solution time: 38.74 seconds
 Baseline overhead compared to computation only: 121.9 %
 -------------------- Previous --------------------
 Baseline: no compression, no asynchronous write.
-Nyx simulation with Previous solution time: 38.52 seconds
+WarpX simulation with Previous solution time: 38.52 seconds
 Previous overhead compared to computation only: 120.6 %
 ---------------------- Ours ----------------------
 Baseline: no compression, no asynchronous write.
-Nyx simulation with Our solution time: 23.87 seconds
+WarpX simulation with Our solution time: 23.87 seconds
 Ours overhead compared to computation only: 36.7 %
 ------------------- Improvement ------------------
 Our improvement compared to previous: 3.29 times
