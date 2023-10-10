@@ -133,7 +133,7 @@ STEP 4 starts ...
 
 ### Step 7: Evaluate Nyx's perormance between (1) baseline, (2) previous, and (3) ours
 ```
-cd ./Nyx/Exec/LyA
+cd $TEST_HOME/Nyx/Exec/LyA
 python3 ./readresults.py test1.txt test2.txt test3.txt test4.txt
 ```
 
@@ -292,7 +292,7 @@ STEP 4 starts ...
 ```
 ### Step 11: Evaluate Nyx's perormance between (1) baseline, (2) previous, and (3) ours
 ```
-cd ./Nyx/Exec/LyA
+cd $TEST_HOME/Nyx/Exec/LyA
 python3 ./readresults.py test1.txt test2.txt test3.txt test4.txt
 ```
 ### Step 12: Evaluate WarpX's perormance between (1) baseline, (2) previous, and (3) ours
