@@ -13,8 +13,7 @@ cmake -DCMAKE_INSTALL_PREFIX=$HDF5_DIR -DHDF5_ENABLE_PARALLEL=ON -DHDF5_ENABLE_T
 make -j 16 && make install
 export TEST_H5_HOME=$TEST_HOME/hdf5/install
 
-cd $ABT_DIR
-cd ..
+cd $VOL_DIR
 git clone https://github.com/pmodels/argobots.git
 cd $ABT_DIR
 ./autogen.sh
