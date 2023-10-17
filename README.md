@@ -204,16 +204,17 @@ python/3.8
 hdf5/1.12.2 (install scripts provided)
 
 
-### Step 1: Download our code and set up environmental variables (2 mins)
+### Step 1: Download our code and set up environmental variables (1 mins)
 If you are using Chameleon Cloud, We use root at the beginning to mitigate any potential environmental mismatch problems
 ```
 sudo su - root
+cd /home/cc/
 git clone https://github.com/jinsian/EuroSys-AsyncSchedule4IO.git
 cd EuroSys-AsyncSchedule4IO
 export TEST_HOME=$(pwd)
 echo "export TEST_HOME=$(pwd)" >> ~/.bashrc
 ```
-### Step 2: Load or install CMake and numpy. For example, in Ubuntu
+### Step 2: Load or install CMake and numpy. For example, in Ubuntu (1 mins)
 ```
 pip3 install numpy
 sudo snap install cmake --classic
@@ -239,11 +240,11 @@ source ./nyx.sh
 ```
 source ./warpx.sh
 ```
-### Step 8: Run Nyx simulation with (1) baseline, (2) previous, and (3) ours
+### Step 8: Run Nyx simulation with (1) baseline, (2) previous, and (3) ours (5 mins)
 ```
 source ./runnyx.sh
 ```
-### Step 9: Run WarpX simulation with (1) baseline, (2) previous, and (3) ours
+### Step 9: Run WarpX simulation with (1) baseline, (2) previous, and (3) ours (5 mins)
 ```
 source ./runwarpx.sh
 ```
@@ -341,3 +342,9 @@ Our improvement compared to previous: 3.29 times
 ----------------------- End ----------------------
 ```
 Please note that the performance may vary on different machines and environments. Nevertheless, you should be able to discern the performance improvements our solution offers compared to previous approaches. These results are consistent with our paper's findings. Please be aware that the runtime may vary, particularly when resources are limited. We highly recommend running steps 8, 9, 11, and 12 multiple times to observe consistent results.
+
+Please be aware that if you use the root user for building from source and want to restart from the middle of the process, you can utilize the following script to swiftly load the entire environment:
+```
+cd /home/cc/EuroSys-AsyncSchedule4IO
+source ./env.sh
+```
