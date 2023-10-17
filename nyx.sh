@@ -1,6 +1,8 @@
 cd $TEST_HOME
 
+mkdir Nyx/subprojects
 cd Nyx/subprojects
+rm -rf ./sundials
 set -e
 git clone https://github.com/LLNL/sundials
 cd sundials
