@@ -205,11 +205,13 @@ hdf5/1.12.2 (install scripts provided)
 
 
 ### Step 1: Download our code and set up environmental variables (2 mins)
+If you are using Chameleon Cloud, We use root at the beginning to mitigate any potential environmental mismatch problems
 ```
+sudo su - root
 git clone https://github.com/jinsian/EuroSys-AsyncSchedule4IO.git
-cd EuroSys-AsyncSchedule
+cd EuroSys-AsyncSchedule4IO
 export TEST_HOME=$(pwd)
-export TEST_HOME=$(pwd) >> ~/.bashrc
+echo "export TEST_HOME=$(pwd)" >> ~/.bashrc
 ```
 ### Step 2: Load or install CMake and numpy. For example, in Ubuntu
 ```
@@ -219,31 +221,31 @@ sudo snap install cmake --classic
 ### Step 3: Load or install OpenMPI. For example, in Ubuntu (7 mins)
 ```
 cd $TEST_HOME
-sudo bash openmpi.sh 
+source ./openmpi.sh 
 ```
 ### Step 4: Download and install the HDF5 library (4 mins)
 ```
-sudo bash hdf5.sh
+source ./hdf5.sh
 ```
 ### Step 5: Install optimized SZ3 compressor (5 mins)
 ```
-sudo bash sz.sh
+source ./sz.sh
 ```
 ### Step 6: Install AMReX and Nyx with our solution (8 mins)
 ```
-sudo bash nyx.sh
+source ./nyx.sh
 ```
 ### Step 7: Install WarpX with our solution (9 mins)
 ```
-sudo bash warpx.sh
+source ./warpx.sh
 ```
 ### Step 8: Run Nyx simulation with (1) baseline, (2) previous, and (3) ours
 ```
-sudo bash ./runnyx.sh
+source ./runnyx.sh
 ```
 ### Step 9: Run WarpX simulation with (1) baseline, (2) previous, and (3) ours
 ```
-sudo bash ./runwarpx.sh
+source ./runwarpx.sh
 ```
 ### Step 10 (Optional): We retaine log files for all runs, and now you can check them out
 ```
