@@ -182,6 +182,9 @@ Our improvement compared to previous: 3.29 times
 ```
 Please note that the performance may vary on different machines and environments. Nevertheless, you should be able to discern the performance improvements our solution offers compared to previous approaches. These results are consistent with our paper's findings. Please be aware that the runtime may vary, particularly when resources are limited. We highly recommend running steps 4, 5, 7, and 8 multiple times to observe consistent results.
 
+This result is primarily correlated to the main claim of our paper, shown in Figure 9. When comparing the relative overhead with both the original and previous solutions, our approach effectively enhances the end-to-end performance of the simulation.
+
+Additionally: (1) You can adjust the number of simulation iterations by modifying "max_step = 10" in "EuroSys-AsyncSchedule4IO/Nyx/Exec/LyA/inputs" for Nyx, or "max_step = 10" in "EuroSys-AsyncSchedule4IO/WarpX/inputs.", and re-run steps 4, 5, 7, and 8. You should observe consistent performance improvements, regardless of the number of simulation iterations, as shown in Figure 10. (2) you can modify the number of processes by changing all parameters of "-np 16" in "EuroSys-AsyncSchedule4IO/runnyx.sh" and "EuroSys-AsyncSchedule4IO/runwarpx.sh.", and re-run steps 4, 5, 7, and 8.  You should observe consistent performance improvements, regardless of the number of processes, as shown in Figure 11.
 
 ## Method 2: Build From Source
 ### Minimum system & software libraries requirements
@@ -348,3 +351,7 @@ Please be aware that if you use the root user for building from source and want 
 cd /home/cc/EuroSys-AsyncSchedule4IO
 source ./env.sh
 ```
+
+This result is primarily correlated to the main claim of our paper, shown in Figure 9. When comparing the relative overhead with both the original and previous solutions, our approach effectively enhances the end-to-end performance of the simulation.
+
+Additionally: (1) You can adjust the number of simulation iterations by modifying "max_step = 10" in "EuroSys-AsyncSchedule4IO/Nyx/Exec/LyA/inputs" for Nyx, or "max_step = 10" in "EuroSys-AsyncSchedule4IO/WarpX/inputs.", and re-run steps 8, 9, 11, and 12. You should observe consistent performance improvements, regardless of the number of simulation iterations, as shown in Figure 10. (2) you can modify the number of processes by changing all parameters of "-np 16" in "EuroSys-AsyncSchedule4IO/runnyx.sh" and "EuroSys-AsyncSchedule4IO/runwarpx.sh.", and re-run steps 8, 9, 11, and 12.  You should observe consistent performance improvements, regardless of the number of processes, as shown in Figure 11.
